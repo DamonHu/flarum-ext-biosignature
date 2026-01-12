@@ -1,6 +1,5 @@
 {
   "name": "damonhu-biosignature",
-  "private": true,
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --watch --mode development"

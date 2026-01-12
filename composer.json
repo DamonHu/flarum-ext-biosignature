@@ -13,6 +13,20 @@
   "require": {
     "flarum/core": "^1.0"
   },
+  "extra": {
+    "flarum-extension": {
+      "title": "Bio Signature",
+      "category": "feature",
+      "icon": {
+        "name": "fas fa-signature",
+        "backgroundColor": "#2185d0",
+        "color": "#fff"
+      },
+      "js": {
+        "forum": "js/dist/forum.js"
+      }
+    }
+  },
   "autoload": {
     "psr-4": {
       "Damonhu\\BioSignature\\": "src/"
