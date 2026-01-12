@@ -4,7 +4,7 @@ console.log('forum.js loaded2222');
 app.initializers.add('damonhu-biosignature', () => {
     console.log('forum.js loaded ssssss');
     let compat = flarum.core.compat;
-    let extend = compat.extend.extend;
+    let extend = compat.extend;
     let Post = compat.components.Post;
     extend(Post.prototype, 'content', function(items) {
         console.log('Post content hook called', this.post.user());
