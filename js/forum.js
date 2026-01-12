@@ -1,6 +1,7 @@
 import { extend } from 'flarum/extend';
 import Post from 'flarum/components/Post';
 import m from 'mithril';
+import app from 'flarum/app';
 
 app.initializers.add('damonhu-biosignature', () => {
     extend(Post.prototype, 'footer', function(items) {
