@@ -1,3 +1,7 @@
+const extend = flarum.core.compat['extend'];
+const Post = flarum.core.compat['components/Post'];
+const m = window.m; // Mithril 也是全局的
+
 console.log('forum.js loaded');
 
 app.initializers.add('damonhu-biosignature', () => {
