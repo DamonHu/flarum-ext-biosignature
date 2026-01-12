@@ -4,10 +4,11 @@ import m from 'mithril';
 
 app.initializers.add('damonhu-biosignature', () => {
     extend(Post.prototype, 'footer', function(items) {
+        console.log('footer hook called', this.post.user());
         const user = this.post.user();
         if (!user) return;
-
         const bio = user.bio();
+        console.log("ssssss", bio)
         if (bio) {
             items.add('bio-signature',
                 m('div.Post-signature', {
