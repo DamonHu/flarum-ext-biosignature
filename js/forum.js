@@ -1,11 +1,11 @@
-const compat = flarum.core.compat;
-const extend = compat.extend.extend;
-const Post = compat.components.Post;
 
 console.log('forum.js loaded1111', extend);
 
 app.initializers.add('damonhu-biosignature', () => {
     console.log('forum.js loaded ssssss');
+    let compat = flarum.core.compat;
+    let extend = compat.extend.extend;
+    let Post = compat.components.Post;
     extend(Post.prototype, 'content', function(items) {
         console.log('Post content hook called', this.post.user());
     });
