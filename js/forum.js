@@ -1,5 +1,5 @@
 
-console.log('forum.js loaded1111', extend);
+console.log('forum.js loaded2222');
 
 app.initializers.add('damonhu-biosignature', () => {
     console.log('forum.js loaded ssssss');
