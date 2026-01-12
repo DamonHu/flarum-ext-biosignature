@@ -4,6 +4,10 @@ import m from 'mithril';
 import app from 'flarum/app';
 
 app.initializers.add('damonhu-biosignature', () => {
+    extend(Post.prototype, 'content', function(items) {
+        console.log('Post content hook called', this.post.user());
+    });
+    
     extend(Post.prototype, 'footer', function(items) {
         console.log('footer hook called', this.post.user());
         const user = this.post.user();
