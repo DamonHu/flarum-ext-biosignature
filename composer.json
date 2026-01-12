@@ -15,18 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "damonhu\\BioSignature\\": "src/"
-    }
-  },
-  "extra": {
-    "flarum-extension": {
-      "title": "Bio Signature",
-      "icon": {
-        "name": "fas fa-signature"
-      },
-      "js": {
-        "forum": "js/forum.js"
-      }
+      "Damonhu\\BioSignature\\": "src/"
     }
   }
 }
