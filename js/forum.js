@@ -1,6 +1,6 @@
 const compat = flarum.core.compat;
 const extend = compat.extend.extend;
-const Post = flarum.components.Post;
+const Post = compat.components.Post;
 
 console.log('forum.js loaded1111', extend);
 
