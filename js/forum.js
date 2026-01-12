@@ -3,9 +3,10 @@ console.log('forum.js loaded2222');
 
 app.initializers.add('damonhu-biosignature', () => {
     console.log('forum.js loaded ssssss');
-    let compat = flarum.core.compat;
-    let extend = compat.extend;
-    let Post = compat.components.Post;
+    const extend = flarum.core.compat['extend'];
+    const Post = flarum.core.compat['components/Post'];
+    const m = window.m; // Mithril 也是全局的
+    
     extend(Post.prototype, 'content', function(items) {
         console.log('Post content hook called', this.post.user());
     });
