@@ -1,0 +1,29 @@
+{
+  "name": "damonhu/flarum-ext-biosignature",
+  "type": "flarum-extension",
+  "description": "Display user bio as signature in posts",
+  "keywords": ["flarum", "signature", "bio"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Damon",
+      "email": "dong765@qq.com"
+    }
+  ],
+  "require": {
+    "flarum/core": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "damonhu\\BioSignature\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Bio Signature",
+      "icon": {
+        "name": "fas fa-signature"
+      }
+    }
+  }
+}
