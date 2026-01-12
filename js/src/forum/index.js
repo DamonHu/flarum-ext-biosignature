@@ -2,12 +2,10 @@ import app from 'flarum/forum/app'; // 确保路径与 webpack externals 一致
 import { extend } from 'flarum/common/extend';
 import Post from 'flarum/forum/components/Post';
 
-const flarumApp = app || (window.flarum && window.flarum.core.app);
-console.log("ssss", flarumApp, app)
-if (!flarumApp) {
+if (!app) {
   console.error('Flarum app 对象未找到！请检查 Webpack externals 配置。');
 } else {
-  flarumApp.initializers.add('damonhu-biosignature', () => {
+  app.initializers.add('damonhu/flarum-ext-biosignature', () => {
     extend(Post.prototype, 'footer', function (items) {
       const post = this.attrs.post;
       if (!post) return;
