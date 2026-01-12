@@ -1,8 +1,3 @@
-import { extend } from 'flarum/extend';
-import Post from 'flarum/components/Post';
-import m from 'mithril';
-import app from 'flarum/app';
-
 console.log('forum.js loaded');
 
 app.initializers.add('damonhu-biosignature', () => {
