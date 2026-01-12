@@ -1,5 +1,5 @@
 {
-  "name": "damonhu-biosignature",
+  "name": "@damonhu/flarum-ext-biosignature",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --watch --mode development"

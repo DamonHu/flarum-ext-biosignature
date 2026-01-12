@@ -5,7 +5,7 @@ import Post from 'flarum/forum/components/Post';
 if (!app) {
   console.error('Flarum app 对象未找到！请检查 Webpack externals 配置。');
 } else {
-  app.initializers.add('damonhu/flarum-ext-biosignature', () => {
+  app.initializers.add('flarum-ext-biosignature', () => {
     extend(Post.prototype, 'footer', function (items) {
       const post = this.attrs.post;
       if (!post) return;
