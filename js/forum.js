@@ -1,6 +1,6 @@
-const extend = flarum.core.compat['extend'];
-const Post = flarum.core.compat['components/Post'];
-const m = window.m; // Mithril 也是全局的
+const compat = flarum.core.compat;
+const extend = compat.extend.extend;
+const Post = flarum.components.Post;
 
 console.log('forum.js loaded1111', extend);
 
