@@ -3,11 +3,14 @@ import Post from 'flarum/components/Post';
 import m from 'mithril';
 import app from 'flarum/app';
 
+console.log('forum.js loaded');
+
 app.initializers.add('damonhu-biosignature', () => {
+    console.log('forum.js loaded ssssss');
     extend(Post.prototype, 'content', function(items) {
         console.log('Post content hook called', this.post.user());
     });
-    
+
     extend(Post.prototype, 'footer', function(items) {
         console.log('footer hook called', this.post.user());
         const user = this.post.user();
