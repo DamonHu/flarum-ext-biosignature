@@ -5,8 +5,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'forum.js',
-    libraryTarget: 'window', // 重要：确保输出可以被 Flarum 识别
-    library: 'module.exports', // 兼容 Flarum 的加载机制
   },
   module: {
     rules: [
