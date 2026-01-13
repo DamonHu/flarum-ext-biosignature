@@ -1,14 +1,16 @@
 {
+  "private": true,
   "name": "@damonhu/flarum-ext-biosignature",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --watch --mode development"
   },
+  "dependencies": {
+    "flarum-webpack-config": "^1.0.0",
+    "webpack": "^4.0.0",
+    "webpack-cli": "^4.0.0"
+  },
   "devDependencies": {
-    "@babel/core": "^7.20.0",
-    "@babel/preset-react": "^7.18.0",
-    "babel-loader": "^9.0.0",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.0"
+    "flarum-tsconfig": "^1.0.0"
   }
 }
