@@ -1,8 +1,8 @@
 // import app from 'flarum/forum/app'; // 确保路径与 webpack externals 一致
-// import { extend } from 'flarum/common/extend';
-// import Post from 'flarum/forum/components/Post';
+import { extend } from 'flarum/common/extend';
+import Post from 'flarum/forum/components/Post';
 
-import { extend, override } from 'flarum/common/extend';
+// import { extend, override } from 'flarum/common/extend';
 if (!app) {
   console.error('Flarum app 对象未找到！请检查 Webpack externals 配置。');
 } else {
