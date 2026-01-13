@@ -15,7 +15,7 @@
   },
   "extra": {
     "flarum-extension": {
-      "title": "Bio Signature",
+      "title": "flarum-ext-biosignature",
       "category": "feature",
       "icon": {
         "name": "fas fa-signature",
