@@ -1,6 +1,7 @@
 // import app from 'flarum/forum/app'; // 确保路径与 webpack externals 一致
 import { extend } from 'flarum/common/extend';
 import Post from 'flarum/forum/components/Post';
+import CommentPost from 'flarum/forum/components/CommentPost';
 
 if (!app) {
   console.error('Flarum app 对象未找到！请检查 Webpack externals 配置。');
@@ -14,7 +15,7 @@ if (!app) {
     extend(Post.prototype, 'view', function (items) {
       console.error("view")
     })
-    extend(Post.prototype, 'footerItems', function (items) {
+    extend(CommentPost.prototype, 'footerItems', function (items) {
       console.error("ssssssss")
       const post = this.attrs.post;
       console.error("ssssssss1", post)
