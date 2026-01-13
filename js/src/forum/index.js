@@ -8,8 +8,13 @@ if (!app) {
   console.error('开始执行初始化器');
   app.initializers.add('flarum-ext-biosignature', () => {
     console.info("init")
-    console.error("init")
-    extend(Post.prototype, 'footer', function (items) {
+    extend(Post.prototype, 'content', function (items) {
+      console.error("content")
+    })
+    extend(Post.prototype, 'view', function (items) {
+      console.error("view")
+    })
+    extend(Post.prototype, 'footerItems', function (items) {
       console.error("ssssssss")
       const post = this.attrs.post;
       console.error("ssssssss1", post)
