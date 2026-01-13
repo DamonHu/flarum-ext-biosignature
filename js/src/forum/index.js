@@ -8,13 +8,16 @@ if (!app) {
 } else {
   app.initializers.add('flarum-ext-biosignature', () => {
     extend(Post.prototype, 'footer', function (items) {
+      console.log("ssssssss")
       const post = this.attrs.post;
+      console.log("ssssssss1", post)
       if (!post) return;
 
       const user = post.user();
       // 这里的 .attribute('bio') 对应 extend.php 里定义的名称
       const bio = user ? user.attribute('bio') : null;
 
+      console.log("ssssssss2", user, bio)
       if (bio) {
         items.add('bio-signature', (
           <div className="Post-signature">
