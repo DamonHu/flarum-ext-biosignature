@@ -2,11 +2,13 @@
 import { extend } from 'flarum/common/extend';
 import Post from 'flarum/forum/components/Post';
 
-// import { extend, override } from 'flarum/common/extend';
 if (!app) {
   console.error('Flarum app 对象未找到！请检查 Webpack externals 配置。');
 } else {
+  console.error('开始执行初始化器');
   app.initializers.add('flarum-ext-biosignature', () => {
+    console.info("init")
+    console.error("init")
     extend(Post.prototype, 'footer', function (items) {
       console.error("ssssssss")
       const post = this.attrs.post;
