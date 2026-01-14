@@ -13,7 +13,7 @@ app.initializers.add('flarum-ext-biosignature', () => {
       if (bio) {
         console.log(bio)
         items.add('bio-signature', (
-          <div className="Post-signature" dangerouslySetInnerHTML={bio}></div>
+          <div className="Post-signature" dangerouslySetInnerHTML={{__html: String(bio || '')}}></div>
         ), -50); // -50 确保它在最后面
       }
     });
