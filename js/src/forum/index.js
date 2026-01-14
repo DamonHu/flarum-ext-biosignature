@@ -1,6 +1,7 @@
 // import app from 'flarum/forum/app'; // 确保路径与 webpack externals 一致
 import { extend } from 'flarum/common/extend';
 import CommentPost from 'flarum/forum/components/CommentPost';
+import { formatText } from 'flarum/common/utils/formatText'; // 导入格式化函数
 
 app.initializers.add('flarum-ext-biosignature', () => {
     extend(CommentPost.prototype, 'footerItems', function (items) {
@@ -17,5 +18,8 @@ app.initializers.add('flarum-ext-biosignature', () => {
           </div>
         ), -50); // -50 确保它在最后面
       }
+      let formattedBio = formatText(bio);
+      console.log(formattedBio);
+      console.log( m('div.Post-signature', formatText(bio)));
     });
 });
