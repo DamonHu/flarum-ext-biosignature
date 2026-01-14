@@ -11,7 +11,6 @@ app.initializers.add('flarum-ext-biosignature', () => {
       const bio = user ? user.attribute('bio') : null;
 
       if (bio) {
-        console.log(bio)
         items.add('bio-signature', (
           <div className="Post-signature">{m.trust(bio)}</div>
         ), -50); // -50 确保它在最后面
