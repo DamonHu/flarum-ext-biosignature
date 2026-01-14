@@ -11,11 +11,8 @@ app.initializers.add('flarum-ext-biosignature', () => {
       const bio = user ? user.attribute('bio') : null;
 
       if (bio) {
-        items.add('bio-signature', (
-          <div className="Post-signature">
-            {bio}
-          </div>
-        ), -50); // -50 确保它在最后面
+        const html = app.formatter.render(bio);
+        items.add('bio-signature', m('div.Post-signature', m.trust(html)) , -50); // -50 确保它在最后面
       }
     });
 });
