@@ -3,7 +3,6 @@ import { extend } from 'flarum/common/extend';
 import CommentPost from 'flarum/forum/components/CommentPost';
 import TextFormatter from 'flarum/utils/TextFormatter';
 
-
 app.initializers.add('flarum-ext-biosignature', () => {
     extend(CommentPost.prototype, 'footerItems', function (items) {
       const post = this.attrs.post;
