@@ -8,7 +8,9 @@ app.initializers.add('flarum-ext-biosignature', () => {
       if (!post) return;
       const user = post.user();
       // 这里的 .attribute('bio') 对应 extend.php 里定义的名称
-      const bio = user ? user.attribute('bio') : null;
+      // const bio = user ? user.attribute('bio') : null;
+      const bio = user ? user.bio() : null;
+      console.log("sssss", user.attribute('bio'), user.bio())
 
       if (bio) {
         items.add('bio-signature', (
