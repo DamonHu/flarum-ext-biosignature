@@ -17,6 +17,6 @@ composer require damonhu/flarum-ext-biosignature:*
 ```
 composer update damonhu/flarum-ext-biosignature:*
 php flarum cache:clear
-flarum assets:publish
+php flarum assets:publish
 ```
 
