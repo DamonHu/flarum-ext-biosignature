@@ -11,6 +11,8 @@ app.initializers.add('flarum-ext-biosignature', () => {
       // const bio = user ? user.attribute('bio') : null;
       const bio = user ? user.bio() : null;
       console.log("sssss", user.attribute('bio'), user.bio())
+      console.log("bio", user.attribute('bioHtml'))
+      console.log("bio2", user.bioHtml())
 
       if (bio) {
         items.add('bio-signature', (
